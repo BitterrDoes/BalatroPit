@@ -1,0 +1,14 @@
+{
+    "id": "BalatroPit",
+    "name": "BalatroPit",
+    "author": ["BitterDoes"],
+    "description": "What does this mod include? It includes Jokers, Boss Blinds, Consumables, new suits and more planned. -- note that by default this will overwrite all of the default game's objects and what not.",
+    "prefix": "CloverPit",
+	"priority": 777,
+    "main_file": "Main.lua",
+    "badge_colour": "794cd4",
+    "dependencies": [
+        "Steamodded (>=1.0.0~ALPHA-1225a)"
+    ],
+    "version": "1.0.0"
+}
