@@ -11,6 +11,7 @@ function ts_mod.Load_file(file) -- totally not me shamelessly stealing code from
 	if chunk then
 		local ok, func = pcall(chunk)
 		if ok then
+			print("loaded ", file)
 			return func
 		end
 	end
