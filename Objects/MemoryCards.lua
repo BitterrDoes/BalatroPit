@@ -13,6 +13,13 @@ SMODS.Atlas {
 SMODS.Back {
 	key = "nyanko",
 	atlas = 'NyankoBack',
+    loc_txt = {
+		name = "Nyanko",
+		text = {
+			"Only nyanko cards"
+		}
+    },
+
 	pos = { x = 0, y = 0 },
 	unlocked = true,
 	loc_vars = function(self, info_queue, back)
@@ -20,8 +27,7 @@ SMODS.Back {
 	end,
 	add_to_pool = function(self, prototype_obj, args)
 		if (prototype_obj ~= nil and prototype_obj.key ~= nil)
-				and (prototype_obj.key:find("^j_") or prototype_obj.key:find("^bl_"))
-				and not prototype_obj.key:find('CloverPit') then
+				and (prototype_obj.key:find("^j_"))	and not prototype_obj.key:find('CloverPit') then
 			return false
 		end
 		return true

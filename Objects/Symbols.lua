@@ -1,5 +1,6 @@
 -- suits = symbols
 
+-- for testing, taken from six suits
 SMODS.Atlas { key = 'lc_cards', path = '8BitDeck.png', px = 71, py = 95 }
 SMODS.Atlas { key = 'hc_cards', path = '8BitDeck_opt2.png', px = 71, py = 95 }
 SMODS.Atlas { key = 'lc_ui', path = 'ui_assets.png', px = 18, py = 18 }
