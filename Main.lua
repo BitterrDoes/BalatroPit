@@ -39,6 +39,5 @@ function ts_mod.Load_Dir(directory)
 end
 
 -- okay okay, actually add the objects now
-print(ts_mod, ts_mod.path)
 ts_mod.Load_Dir("Objects")
 ts_mod.Load_Dir("Hooks")

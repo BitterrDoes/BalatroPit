@@ -26,7 +26,6 @@ SMODS.Back {
 		return {}
 	end,
 	add_to_pool = function(self, prototype_obj, args)
-        print("Using add_to_pool from back")
 		if (prototype_obj ~= nil and prototype_obj.key ~= nil)
 				and (prototype_obj.key:find("^j_"))	and not prototype_obj.key:find('CloverPit') then
             print("Added joker ", prototype_obj.key)
