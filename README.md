@@ -18,3 +18,12 @@ Add the Drawers from the game, which in cloverpit allow you to keep Charms from 
 
 ### 5
 Obviously adding the 666's from cloverpit would be a main goal in mind, but currently i dont know how I would implement this, if you have ideas ping me in the #dev-brainstorming channel in the smods discord server
+
+### 6
+Make Chips stay between rounds, and can be spent on extra hands
+
+
+-- Implemented ideas --
+---------------
+
+uhh yo mama

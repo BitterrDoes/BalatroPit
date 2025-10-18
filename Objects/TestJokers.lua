@@ -85,39 +85,6 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
-	key = 'walkie_talkie2',
-	loc_txt = {
-		name = 'Walkie Talkie',
-		text = {
-			"Each played {C:attention}10{} or {C:attention}4",
-			"gives {C:chips}+#1#{} Chips and",
-			"{C:mult}+#2#{} Mult when scored"
-		}
-	},
-	config = { extra = { chips = 10, mult = 4 } },
-	rarity = 1,
-	atlas = 'ModdedVanilla',
-	pos = { x = 1, y = 1 },
-	cost = 4,
-	loc_vars = function(self, info_queue, card)
-		return { vars = { card.ability.extra.chips, card.ability.extra.mult } }
-	end,
-	calculate = function(self, card, context)
-		if context.individual and context.cardarea == G.play then
-			-- :get_id tests for the rank of the card. Other than 2-10, Jack is 11, Queen is 12, King is 13, and Ace is 14.
-			if context.other_card:get_id() == 10 or context.other_card:get_id() == 4 then
-				-- Specifically returning to context.other_card is fine with multiple values in a single return value, chips/mult are different from chip_mod and mult_mod, and automatically come with a message which plays in order of return.
-				return {
-					chips = card.ability.extra.chips,
-					mult = card.ability.extra.mult,
-					card = context.other_card
-				}
-			end
-		end
-	end
-}
-
-SMODS.Joker {
 	key = 'gros_michel2',
 	loc_txt = {
 		name = 'Gros Michel 2',
