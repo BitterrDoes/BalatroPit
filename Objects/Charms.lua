@@ -291,11 +291,11 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Pentacle',
 		text = {
-			"luck x#1#. multiplier grows by 0.1 Whenever 5 cards played.",
+			"luck x#1#. multiplier grows by #3# Whenever 5 cards played.",
 		}
 	},
     blueprint_compat = true,
-	config = { extra = {xmult = 1.1, Requirement = 5, add = 0.1} },
+	config = { extra = {xmult = 1.1, Requirement = 5, add = 0.15} },
 	rarity = 2,
 	atlas = 'ModdedVanilla',
 	pos = { x = 4, y = 0 },

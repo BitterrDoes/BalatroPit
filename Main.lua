@@ -37,6 +37,6 @@ end
 
 -- okay okay, actually load the objects now
 ts_mod.Load_file("Atlases.lua")-- load the atlases, important
+ts_mod.Load_file("Hook.lua")
 
 ts_mod.Load_Dir("Objects")
-ts_mod.Load_Dir("Hooks")
