@@ -10,14 +10,6 @@ function SMODS.add_to_pool(prototype_obj, args)
 	return smods_add_to_pool(prototype_obj, args)
 end
 
-local Game_start_run = G.GAME.start_run
--- G.GAME.start_run = function()
-	
--- 	print("testing1")
-
--- 	return Game_start_run
--- end
-
 function SMODS.current_mod.reset_game_globals(init)
 	if init then
 		print('1')
