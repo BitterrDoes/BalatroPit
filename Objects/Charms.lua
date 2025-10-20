@@ -377,7 +377,7 @@ SMODS.Joker {
 			"Makes space for 2 more Lucky Charms.",
 		}
 	},
-	config = { extra = {space = 2} },
+	config = { extra = {jokerslots = 2} },
     blueprint_compat = false,
 	rarity = 2,
 	atlas = 'ModdedVanilla',
@@ -387,9 +387,11 @@ SMODS.Joker {
 		return { vars = {card.ability.extra.space}}
 	end,
 
-    calculate = function(self, card, context)
-        if context.mod_probability and not context.blueprint then
-            
-        end
+    add_to_deck = function(self, card)
+        G.jokers.config.card_limit = G.jokers.config.card_limit + card.ability.extra.jokerslots
     end,
+
+    remove_from_deck = function(self, card)
+		G.jokers.config.card_limit = G.jokers.config.card_limit - card.ability.extra.jokerslots
+	end,
 }
