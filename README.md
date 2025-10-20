@@ -26,4 +26,4 @@ Make Chips stay between rounds, and can be spent on extra hands
 -- Implemented ideas --
 ---------------
 
-uhh yo mama
+Phone calls!! meaning you get 3 vouchers, and then after a choice is made you lose the other 2

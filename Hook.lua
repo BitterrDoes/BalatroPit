@@ -10,10 +10,8 @@ function SMODS.add_to_pool(prototype_obj, args)
 	return smods_add_to_pool(prototype_obj, args)
 end
 
-function SMODS.current_mod.reset_game_globals(init)
+function cloverpit.reset_game_globals(init)
 	if init then
-		print('1')
 		SMODS.change_voucher_limit(2)
 	end
-	print("2")
 end

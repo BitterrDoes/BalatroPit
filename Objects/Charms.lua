@@ -264,7 +264,7 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Rotated Hamsa',
 		text = {
-			"Grants Luck x#1# when 1 hand is left.",
+			"Grants Luck x#1# when on last hand.",
 		}
 	},
     blueprint_compat = true,
@@ -278,7 +278,7 @@ SMODS.Joker {
 	end,
 
     calculate = function(self, card, context)
-        if context.joker_main and G.GAME.current_round.hands_left >= 1 then -- taken some what from burglar
+        if context.joker_main and G.GAME.current_round.hands_left == 0 then -- taken some what from burglar
             return {
                 xmult = card.ability.extra.xmult
             }
@@ -336,7 +336,9 @@ SMODS.Joker {
 	end,
 
     calculate = function(self, card, context)
-        SMODS.change_voucher_limit(4) -- prolly a rly bad way to do this
+        if context.mod_probability and not context.blueprint then
+            SMODS.change_voucher_limit(1) -- prolly a rly bad way to do this
+        end
     end
 }
     -- Horseshoe
@@ -363,6 +365,31 @@ SMODS.Joker {
             return {
                 numerator = context.numerator * 2
             }
+        end
+    end,
+}
+    -- Property Certificate
+SMODS.Joker {
+    key = 'propCert',
+	loc_txt = {
+		name = 'Property Certificate',
+		text = {
+			"Makes space for 2 more Lucky Charms.",
+		}
+	},
+	config = { extra = {space = 2} },
+    blueprint_compat = false,
+	rarity = 2,
+	atlas = 'ModdedVanilla',
+	pos = { x = 4, y = 0 },
+	cost = 4, -- for now tickets = money / 2
+	loc_vars = function(self, info_queue, card)
+		return { vars = {card.ability.extra.space}}
+	end,
+
+    calculate = function(self, card, context)
+        if context.mod_probability and not context.blueprint then
+            
         end
     end,
 }
