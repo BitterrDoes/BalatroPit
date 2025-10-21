@@ -13,7 +13,7 @@
     Rotated Hamsa(rham): Line ### to ### | description
     Pentacle(pent): Line 313 to 333 | description
     Horseshoe(horshe): Line 335 to ### | Charms with "Triggers Randomly" activate double more often. 
-    empty: Line ### to ### | description
+    Property Certificate(propCert): Line 372 to 397 | Makes space for 2 more Lucky Charms.
     empty: Line ### to ### | description
     empty: Line ### to ### | description
     empty: Line ### to ### | description
@@ -374,7 +374,7 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Property Certificate',
 		text = {
-			"Makes space for 2 more Lucky Charms.",
+			"Makes space for 2 more Charms.",
 		}
 	},
 	config = { extra = {jokerslots = 2} },
