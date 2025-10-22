@@ -291,7 +291,8 @@ SMODS.Joker {
 	loc_txt = {
 		name = 'Pentacle',
 		text = {
-			"luck x#1#. multiplier grows by #3# Whenever 5 cards played.",
+			"Luck x#1#.",
+            "Multiplier grows by #3# whenever 5 cards played.",
 		}
 	},
     blueprint_compat = true,

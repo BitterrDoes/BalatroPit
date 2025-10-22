@@ -1,6 +1,7 @@
 -- variables
 cloverpit = SMODS.current_mod
-
+cloverpit.StoredChips = 0
+cloverpit.ModsUsing = #NFS.getDirectoryItems(string.reverse(string.sub(string.reverse(cloverpit.path), 9, -1))) -- i dunno how to get name of mod folder so ig this is enough
 -- Fucntions
 
 function cloverpit.Load_file(file) -- basically just SMODS.load_file() but safer, so i can accidentally have somethign break and it be chill
@@ -35,11 +36,12 @@ function cloverpit.Load_Dir(directory)
 end
 
 -- okay okay, actually load the objects now
-cloverpit.Load_file("Atlases.lua")-- load the atlases, important
-cloverpit.Load_file("Hook.lua")
-cloverpit.Load_Dir("Objects")
+cloverpit.Load_file("Atlases.lua")
+cloverpit.Load_Dir("Scripts")
+cloverpit.Load_Dir("Scripts/Objects")
+cloverpit.Load_Dir("Scripts/JokeObjects")
 
---  mod.calculate
+--  mod related things??
 cloverpit.calculate = function(self, context)
 	if context.buying_card and context.card.ability.set == "Voucher" then
 		-- delete the other ones
@@ -47,5 +49,16 @@ cloverpit.calculate = function(self, context)
 		for i, _ in pairs(G.GAME.current_round.voucher.spawn) do -- v = Boolean, determines if it spawns or not
 			G.GAME.current_round.voucher.spawn[i] = false -- because fuck me i guess, and ignore me, HOLY SHIT IT DIDNT IGNORE ME!!
 		end
+	elseif context.setting_blind then
+		G.E_MANAGER:add_event(Event({	--| Will set chips to the amount earned (FIRST TRY BTW LETS GOOO)
+			trigger = "ease",
+			delay = 2,
+			ref_table = G.GAME,
+			ref_value = "chips",
+			ease_to = cloverpit.StoredChips,
+		}))
+	elseif context.end_of_round then
+		cloverpit.StoredChips = G.GAME.chips -- set stored
 	end
 end
+---- WAHHHHH I CANT DO THE UI

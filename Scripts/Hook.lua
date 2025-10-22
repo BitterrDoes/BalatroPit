@@ -11,7 +11,10 @@ function SMODS.add_to_pool(prototype_obj, args)
 end
 
 function cloverpit.reset_game_globals(init)
+		print(cloverpit.ModsUsing)
 	if init then
 		SMODS.change_voucher_limit(2)
+		G.GAME.starting_params.ante_scaling = 3
+		cloverpit.StoredChips = 0
 	end
 end

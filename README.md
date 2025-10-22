@@ -22,8 +22,17 @@ Obviously adding the 666's from cloverpit would be a main goal in mind, but curr
 ### 6
 Make Chips stay between rounds, and can be spent on extra hands
 
+### 7
+Compatibility with different mods, such as maniatro, dumbtro, flushtro, joker display, lost edition and more, I do also want to have special encounters with other mods, such as the consumables in maniatro
+
+### 8
+Circling your mouse around The Water like 10 times (by astro)
+
+### 9
+settings page to turn on joke objects
 
 -- Implemented ideas --
 ---------------
 
 Phone calls!! meaning you get 3 vouchers, and then after a choice is made you lose the other 2
+keeping chips, but like the game's really easy so i need to add scaling
